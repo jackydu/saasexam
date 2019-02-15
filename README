@@ -42,3 +42,18 @@
 	conf/settings_development.py 文件：DATABASES（本地开发数据库信息）
 	conf/settings_testing.py 文件：DATABASES（测试环境数据库信息）
 	conf/settings_production.py 文件：DATABASES（正式环境数据库信息）
+
+https://docs.bk.tencent.com/guide/development.html#django
+
+
+配置文件修改
+1. python manage.py migrate
+2. python manage.py startapp saas_exam_jacky
+3. 修改config/default.py 在INSTALLED_APPS中添加saas_exam_jacky
+4. 在saas_exam_jacky/models.py中定义模型
+5. python manage.py makemigrations saas_exam_jacky
+6. python manage.py migrate saas_exam_jacky
+7. 添加模块的url配置,在saas_exam_jacky目录下新建urls.py
+8. 修改urls.py 配置相关url到saas_exam_jacky.urls
+9. python manage.py runserver 172.0.0.1:8000
+10. 配置host 访问http://dev.paas.bkjacky.com/

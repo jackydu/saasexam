@@ -24,6 +24,7 @@ urlpatterns = patterns(
     url(r'^account/', include('account.urls')),
     # 应用功能开关控制--请勿修改
     url(r'^app_control/', include('app_control.urls')),
+    url(r'^api/', include('saas_exam_jacky.urls')),
     # 在home_application(根应用)里开始开发你的应用的主要功能
     url(r'^', include('home_application.urls')),
 )
